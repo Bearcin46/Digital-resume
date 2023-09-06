@@ -7,6 +7,9 @@
     margin:0;
     box-sizing: border-box;
 }
+body{
+    background-color:#006A4E;
+}
 .container{
     
     display: flex;
@@ -18,10 +21,11 @@
 .wrapper{
     width:1028px;
     border: 1px solid black;
-    background:rgba(210, 224, 230, 0.784);
+    background:rgb(161, 212, 161);
     border-radius: 15px;
     overflow: hidden;
     margin-bottom:1.5rem ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 h1{
     font-family: 'Roboto', sans-serif;
@@ -47,7 +51,7 @@ a{
 }
 .bx{
     color:black;
-    font-size: small;
+    font-size: large;
     
 }
 hr{
@@ -115,10 +119,12 @@ hr{
    
 }
 .about__content{
-    padding-left:10px;
+    text-align: justify;
+    padding: 10px;
 }
   
 /*styling h3*/
+
 .experience > h3,
 .education > h3,
 .project > h3{
@@ -157,10 +163,17 @@ hr{
     margin-top: 0.5rem;
    
 }
+.company{
+    font-weight: bold;
+    font-size: 0.9rem;
+    color:brown;
+    font-style:bold;
+}
 /*Maincontent*/
 .content{
     display:flex;
     flex-direction: row;
+    
 }
 /*main*/
 .main{
@@ -266,12 +279,12 @@ hr{
   
   .skill_bar {
     position: absolute;
-    left: 10;
+    left: 20;
     bottom: 0;
-    background-color: red;
+    background-color: green;
     height: 0.25rem;
     border-radius: 0.5rem;
-    z-index: -10;
+    z-index: -0.09;
    
   }
   
@@ -341,23 +354,34 @@ hr{
 
 
 /*bottom*/
-.bottom{
-    height:0.25rem;
+footer{
+    height:2.25rem;
     width:100%;
     left:0;
     right:0;
     bottom:0;
     background-color:rgb(248, 65, 65);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #000000;
 }
 /*media*/
 @media(max-width:768px){
-   
+ 
     .wrapper{
         width:100%;
         margin:0 auto;
         border: 1px solid black;
         background:rgba(210, 224, 230, 0.784);
+        border-radius: 1px;
 
+    }
+    .header__details > ul > li > .bx{
+        
+        font-size: small;
+        
     }
     h1{
         font-family: 'Roboto', sans-serif;
@@ -386,6 +410,7 @@ hr{
         margin-bottom: -50px;
         text-align: center;
         height: 225px;
+        border-radius: 0;
     }
     .content{
         display:flex;
@@ -430,9 +455,11 @@ hr{
 }
     .side{
         border-bottom: 1px solid red;
+        width:100%;
     }
     .side__skills{
         margin-bottom: 1rem;
+        width:100%;
     }
     .experience,
     .education,
@@ -477,5 +504,20 @@ hr{
     }
     .project{
         margin-bottom: 2rem;
+    }
+    /*bottom*/
+    footer{
+        height:2.25rem;
+        width:100%;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:rgb(248, 65, 65);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: #000000;
+        
     }
 }
